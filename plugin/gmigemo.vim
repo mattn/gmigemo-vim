@@ -1,7 +1,7 @@
 "=============================================================================
 " File: gmigemo.vim
 " Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-" Last Change:08-Dec-2011.
+" Last Change:09-Dec-2011.
 " Version: 0.1
 " WebPage: http://github.com/mattn/gmigemo-vim
 " Usage:
@@ -59,7 +59,7 @@ function! g:GoogleMigemo(word)
 endfunction
 
 function! s:GoogleMigemo(word)
-  if executable('curl') == ''
+  if executable('curl') == 0
     echohl ErrorMsg
     echo 'GoogleMigemo: curl is not installed'
     echohl None
