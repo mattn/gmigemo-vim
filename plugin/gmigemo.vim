@@ -1,7 +1,7 @@
 "=============================================================================
 " File: gmigemo.vim
 " Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-" Last Change:09-Dec-2011.
+" Last Change:29-Jun-2012.
 " Version: 0.1
 " WebPage: http://github.com/mattn/gmigemo-vim
 " Usage:
@@ -48,7 +48,6 @@ function! g:GoogleMigemo(word)
   let str = iconv(res.content, "utf-8", &encoding)
   let str = substitute(str, '\\u\(\x\x\x\x\)', '\=s:nr2enc_char("0x".submatch(1))', 'g')
   let str = substitute(str, "\n", "", "g")
-  let g:hoge = str
   let arr = eval(str)
   let mx = ''
   for m in arr
